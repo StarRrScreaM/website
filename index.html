@@ -685,8 +685,8 @@
 </span><span>          </span><span style="color:#f5ab35">console</span><span>.log(</span><span style="color:#abe338">&#x27;start read weather data&#x27;</span><span>);
 </span><span>          </span><span style="color:#dcc6e0">let</span><span> str_result = </span><span style="color:#abe338">&quot;&quot;</span><span>;
 </span><span>          </span><span style="color:#dcc6e0">try</span><span> {
-</span><span>            </span><span style="color:#dcc6e0">const</span><span> file_name = </span><span style="color:#abe338">&quot;weather.json&quot;</span><span>;
-</span><span>            </span><span style="color:#dcc6e0">const</span><span> mini_app_id = </span><span style="color:#f5ab35">1066654</span><span>;
+</span><span>            </span><span style="color:#dcc6e0">const</span><span> file_name = </span><span style="color:#abe338">&quot;weather.json&quot;</span><span>; </span><span style="color:#d4d0ab">//указываем путь к файлу данных weather.json или forecast.json</span><span></span>
+</span><span>            </span><span style="color:#dcc6e0">const</span><span> mini_app_id = </span><span style="color:#f5ab35">1066654</span><span>; </span><span style="color:#d4d0ab">//указываем ID приложения</span><span></span>
 </span>
 <span>            </span><span style="color:#dcc6e0">const</span><span> [fs_stat, err] = hmFS.stat(file_name, {
 </span><span>              </span><span class="hljs-attr">appid</span><span>: mini_app_id
@@ -735,7 +735,7 @@
         }
 
 <span>        </span><span class="hljs-function" style="color:#dcc6e0">function</span><span class="hljs-function"> </span><span class="hljs-function" style="color:#00e0e0">updateWeatherApp</span><span class="hljs-function">(</span><span class="hljs-function">) </span><span>{
-</span><span>          </span><span style="color:#f5ab35">console</span><span>.log(</span><span style="color:#abe338">&#x27;tick&#x27;</span><span>)
+</span><span>          </span><span style="color:#f5ab35">console</span><span>.log(</span><span style="color:#abe338">&#x27;update_weather_from_app&#x27;</span><span>)
 </span><span>          </span><span style="color:#dcc6e0">let</span><span> read_str = read_weather_data_str();
 </span>          getDataValue(read_str);
         }
