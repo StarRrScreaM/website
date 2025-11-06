@@ -950,68 +950,7 @@
     type="text/javascript"></script>
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const installLink = document.querySelector('a[href="#install-qr-code"]');
-      const target = document.querySelector('#install-qr-code');
-      const question = target ? target.querySelector('.faq-question') : null;
 
-      if (installLink && target && question) {
-        installLink.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          // Плавная прокрутка к якорю
-          document.querySelector('#install-qr-code').scrollIntoView({
-            behavior: 'smooth'
-          });
-
-          // Открываем спойлер ТОЛЬКО если он закрыт
-          setTimeout(() => {
-            const isOpen = target.classList.contains('w--open') ||
-              target.querySelector('.faq-answer').style.maxHeight;
-
-            if (!isOpen) {
-              question.click();
-            }
-            // Если хочешь — при повторном клике закрывать:
-            // else { question.click(); }
-          }, 500);
-        });
-      }
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const contentEl = document.getElementById("changelog-content");
-
-      if (contentEl) {
-        // ТОЧНЫЙ ПУТЬ, КАК ТЫ УКАЗАЛ
-        fetch("cdn.prod.website-files.com/676a7459e0a57746f51bf71a/changelog.txt")
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`HTTP ${response.status} — файл не найден или недоступен`);
-            }
-            return response.text();
-          })
-          .then(text => {
-            contentEl.innerHTML = text
-              .replace(/&/g, "&amp;")
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")
-              .replace(/\n/g, "<br>");
-          })
-          .catch(err => {
-            console.error("Ошибка загрузки:", err);
-            contentEl.innerHTML = `
-            <p style="color:#e74c3c; font-style:italic;">
-              Ошибка загрузки changelog.txt<br>
-              <small>${err.message}</small>
-            </p>`;
-          });
-      }
-    });
-  </script>
 
 
 </body>
