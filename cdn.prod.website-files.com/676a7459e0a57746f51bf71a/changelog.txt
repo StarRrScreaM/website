@@ -1,0 +1,36 @@
+ver 1.1 
+	- fix am pm to 24h for com version provider
+	- fix alighment current temp
+	- fix + sign for temp on the main screen
+	- fix am pm for sunrise, sunset on the main screen
+
+ver 1.2.3
+	- added version display in watch app settings
+	- added tap to change 5 day forecast and 5 hour forecast 
+	- fix phone coordinate background update (switcher and logic)
+	- fix background forecast update
+
+ver 1.2.4
+	- add balance 2
+	- change localStorage logic, performance improvement
+	- change second-widget background fill to round for round watches
+	- added forced receiving of GPS coordinates from native weather before each weather request
+	- Fixed missing weather at 00:00 in 24-hour forecast for RU server
+	- The API key will be synced each time you select an OpenWeather provider
+	
+ver 1.2.5
+	- rewrite all localStorage code, optimise for zeppOS 4+
+	- on the sec-widget widget add button (time area) for forced weather update (opens a blank page and automatically closes after update)
+	- add switcher OpenWeather API 3.0 for paid key that gets UVI data
+
+ver 1.2.6
+	- fix weather data from yandex ru server 
+	- fix yandex forecast data
+	- fix Max and Min temp openWeather provider
+	- added check last version button in settings
+
+ver 1.2.6a
+	- fix yandex city name
+
+ver 1.2.6b
+	- fix yandex minus temperature parsing class
