@@ -1014,7 +1014,30 @@
     type="text/javascript"></script>
 
 
+  <script>
+    // Инициализация Webflow Interactions для GitHub Pages
+    if (typeof Webflow !== 'undefined') {
+      // Ждём полной загрузки
+      window.addEventListener('load', function () {
+        // Устанавливаем атрибуты страницы (замени на свои значения из Webflow)
+        const html = document.documentElement;
+        html.setAttribute('data-wf-page', '676a7459e0a57746f51bf775');  // Из экспорта: например, '5f1a2b3c4d' — найди в HTML или JS
+        html.setAttribute('data-wf-site', '676a7459e0a57746f51bf71a');  // Из экспорта: например, '676a7459e0a57746f51bf775' — твой ID из CDN
 
+        // Инициализируем Interactions (Ix)
+        if (Webflow.require) {
+          Webflow.require('ix').init();
+          console.log('Webflow Interactions инициализированы!');
+        }
+
+        // Инициализируем другие модули (если нужно для анимаций)
+        Webflow.ready();
+        Webflow.require('ix2').init();  // Если используешь Ix 2.0
+      });
+    } else {
+      console.error('Webflow JS не загружен — проверь <script src="js/webflow.js">');
+    }
+  </script>
 
 
 </body>
