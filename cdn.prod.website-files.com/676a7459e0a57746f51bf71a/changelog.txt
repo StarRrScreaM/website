@@ -34,3 +34,6 @@ ver 1.2.6a
 
 ver 1.2.6b
 	- fix yandex minus temperature parsing class
+
+ver 1.2.7
+	- fix convert koef in inHg value
