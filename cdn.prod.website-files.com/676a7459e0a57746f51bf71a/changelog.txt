@@ -37,3 +37,8 @@ ver 1.2.6b
 
 ver 1.2.7
 	- fix convert koef in inHg value
+	- fix translations (widget WeekDays etc.)
+	- fix a forecast graph break
+
+ver 1.2.8
+	- fix yandex icon and conditions
