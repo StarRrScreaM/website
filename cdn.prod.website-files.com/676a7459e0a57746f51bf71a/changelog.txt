@@ -45,3 +45,5 @@ ver 1.2.8
 
 ver 1.2.9
 	- fix yandex Weather Extended Description 
+	- added better hour weather for openweather api 3.0
+
