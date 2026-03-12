@@ -47,3 +47,6 @@ ver 1.2.9
 	- fix yandex Weather Extended Description 
 	- added better hour weather for openweather api 3.0
 
+ver 1.3.0
+	- - fix parsing city and coordinates from the watch
+	- [MAJOR] added an option receiving phone gps coordinates via the AmazSync Android App
